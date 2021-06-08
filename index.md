@@ -22,7 +22,7 @@ Raw and processsed data from this study can be downloaded below. The source code
   - [Hypoxia vs Normoxia (12hr)](/src/09_DSeq2_Rmarkdown/IL22_6hr_vs_Mock_6hr.html)
   - [Hypoxia vs Normoxia (D1)](/src/09_DSeq2_Rmarkdown/IL22_12hr_vs_Mock_12hr.html)
   - [Hypoxia vs Normoxia (D2)](/src/09_DSeq2_Rmarkdown/IL22_24hr_vs_Mock_24hr.html)
-- [log2 fold changes](/src/09_DSeq2_Rmarkdown/log2_fold_change.html)
+- [log2 fold changes](/src/09_DSeq2_Rmarkdown/log2_fold_change.html) - [(RDS)](/data/diffExpLogFCmatrix.RDS)
 - [Signalling programs](/data/progeny_all_results.csv)
 - [Transcription factor activities](data/tfactivity_all_results.csv)
 - CIBERSORTx deconvolution - [ABSOLUTE](/results/Deconvolution/CIBERSORTx_Absolute_Results.txt),[RELATIVE](/results/Deconvolution/CIBERSORTx_Relative_Results.txt)
