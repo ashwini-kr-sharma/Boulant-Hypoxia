@@ -15,7 +15,7 @@ Raw and processsed data from this study can be downloaded below. The source code
 - [Raw fastq files](https://www.ncbi.nlm.nih.gov/gds)
 - Raw counts - [RDS](/data/hypoxia_filtered_counts.RDS), [csv](/data/hypoxia_filtered_counts.csv)
 - rlog transformed data - [RDS](/data/rlogTransformation.RDS)
-- [Quality control - MultiQC](/results/multiqc_report.html)
+- [Quality control - MultiQC](/results/MultiQC/multiqc_report.html)
 - Differentially expresed genes (All) - [RDS](/data/diffExpGenes.RDS), [xls](/data/DGEtables.xls)
 - Differentially expressed genes -
   - [Hypoxia vs Normoxia (6hr)](/src/09_DSeq2_Rmarkdown/IL22_3hr_vs_Mock_3hr.html)
