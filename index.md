@@ -25,5 +25,5 @@ Raw and processsed data from this study can be downloaded below. The source code
 - [log2 fold changes](/src/09_DSeq2_Rmarkdown/log2_fold_change.html) - [(RDS)](/data/diffExpLogFCmatrix.RDS)
 - [Signalling programs](/data/progeny_all_results.csv)
 - [Transcription factor activities](data/tfactivity_all_results.csv)
-- CIBERSORTx deconvolution - [ABSOLUTE](/results/Deconvolution/CIBERSORTx_Absolute_Results.txt),[RELATIVE](/results/Deconvolution/CIBERSORTx_Relative_Results.txt)
+- CIBERSORTx deconvolution - [ABSOLUTE](/results/Deconvolution/CIBERSORTx_Absolute_Results.txt), [RELATIVE](/results/Deconvolution/CIBERSORTx_Relative_Results.txt)
 
