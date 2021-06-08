@@ -2,6 +2,8 @@
 
 ### Experimental design
 
+![experimental design](/Hypoxia_ExpDesign.png)
+
 ### Methodology
 
 Raw RNA sequencing reads (fastq) were aligned to the ensembl human GRCh38 genome reference using [Rsubread](https://doi.org/10.1093/nar/gkz114) with default settings. Read summariztion was done using [featureCounts](https://doi.org/10.1093/bioinformatics/btt656). Various quality metrics of the the raw reads and alignment statistics were analysed using [MultiQC](https://doi.org/10.1093/bioinformatics/btw354). Differential gene expression analysis was performed uing DSeq2, rlog transformed data was used for multi dimensional scaling and clustering analyses. Signalling programs were quantified using [PROGENy](https://doi.org/10.1038/s41467-017-02391-6). Transcription factor activities were computed using [DoRothEA](https://doi.org/10.1101/gr.240663.118) and [VIPER](https://doi.org/10.1038/ng.3593). Enrichment analysis on the most differentially expressed genes (-1< logFC >+1 and adjusted p value < 0.05) was performed using [enrichR](https://doi.org/10.1093/nar/gkw377).
