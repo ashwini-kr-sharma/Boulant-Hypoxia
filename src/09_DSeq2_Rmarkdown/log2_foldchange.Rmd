@@ -1,0 +1,52 @@
+---
+title: "log2 fold change"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+    highlight: kate
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+library(DT)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=FALSE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+### NOTE
+
+Due to the large table with ~18000 rows, the initial loading of this interactive `HTML` document can take up to **2-3 minutes** or even longer. Please be patient. In case you get a **page unresponsive** message in your browser, choose to **wait** and don’t refresh the page. Refreshing the page will unnecessarily start the page reload from scratch and cause additional delays.
+
+```{r}
+
+#-------------------------------------------------------------------------------
+# Interactive DGE tables
+#-------------------------------------------------------------------------------
+
+path = "/icgc/dkfzlsdf/analysis/B080/sharma/boulantLab/bulk_hypoxia/"
+dge  = readRDS(paste0(path, "analysis/DiffExp/diffExpLogFCmatrix.RDS"))
+
+```
+
+## Fold changes
+
+```{r}
+datatable(round(dge, 4), rownames = TRUE, filter="top", class="compact",
+           caption = "log2 fold change Treatment vs Mock",
+           extensions = c('Buttons') ,
+           options = list(autoWidth = TRUE,
+           dom = 'Blfrtip',
+           buttons = c('csv', 'excel')))
+
+```
+

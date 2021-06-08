@@ -1,0 +1,61 @@
+---
+title: "Differential gene expression analysis"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+  highlight: kate
+---
+  
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+library(DT)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+               cache=FALSE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+## NOTE
+
+Due to the large size of table with ~18000 rows, the initial loading of this interactive `HTML` document can take up to **2-3 minutes** or even longer. Please be patient. In case you get a **page unresponsive** message in your browser, choose to **wait** and don’t refresh the page. Refreshing the page will unnecessarily start the page reload from scratch and cause additional delays.
+
+
+```{r}
+
+#-------------------------------------------------------------------------------
+# Interactive DGE tables
+#-------------------------------------------------------------------------------
+
+path = "/icgc/dkfzlsdf/analysis/B080/sharma/boulantLab/bulk_hypoxia/"
+dge  = readRDS(paste0(path, "analysis/DiffExp/diffExpGenes.RDS"))
+
+dge = lapply(dge, function(x){
+  x = data.frame(x)[,c(6,1:5)]
+  x[,c(2:4)] = round(x[,c(2:4)], 2)
+  x$pvalue = signif(x$pvalue, 2)
+  x$padj = signif(x$padj, 2)
+  return (x)
+})
+
+```
+
+## Hypoxia vs Normoxia (12hr)
+
+```{r}
+
+datatable(dge$T_12hr, rownames = FALSE, filter="top", class="compact",
+          caption = "Differential gene expression analysis - Hypoxia vs Normoxia (12hr)",
+          extensions = c('Buttons') ,
+          options = list(autoWidth = TRUE,
+                         dom = 'Blfrtip',
+                         buttons = c('csv', 'excel')))
+
+```
