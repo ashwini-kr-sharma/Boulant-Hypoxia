@@ -7,6 +7,7 @@
 ### Scripts
 
 All script can be found in the `/src/` directory
+
 0. `/src/00_submitJobs.sh` - This is the `bash` script to run analysis `1,2,3,4` in the cluster environment
 1. `/src/01_fastQC.sh` - Script to perform `fastQC` analysis on the raw `fastq` files
 2. `/src/02_multiQC.sh` - Script to perform `QC analysis` of raw reads and alignment statistics
